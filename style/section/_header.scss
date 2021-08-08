@@ -1,0 +1,104 @@
+.header {
+    padding: 30px 0 17px;
+    background: #E5E5E5;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        &-adress {
+            position: relative;
+            padding-left: 25px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/header-adress.svg);
+                width: 13px;
+                height: 12px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-mail {
+            position: relative;
+            padding-left: 20px;
+            margin-left: 10px;
+            color: #000000;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/header-mail.svg);
+                width: 11px;
+                height: 8px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__phone {
+        margin-right: 15px;
+
+        &-link {
+            font-size: toRem(18);
+            font-weight: 700;
+            color: #000000;
+            display: block;
+            position: relative;
+            padding-left: 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/phone-icon.svg);
+                width: 13px;
+                height: 13px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__descr {
+        font-size: toRem(10);
+        color: #979797;
+    }
+
+    &__btn {
+        font-size: toRem(10);
+        background: #52C306;
+        border-radius: 4px;
+        padding: 10px 20px;
+        color: #FFFFFF;
+        width: 149px;
+        height: 30px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 17px 45px;
+        &-link {
+            font-size: toRem(12);
+            color: #9B9B9B;
+            white-space: nowrap;
+        }
+    }
+
+}
