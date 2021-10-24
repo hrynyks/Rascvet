@@ -1,0 +1,89 @@
+.hero {
+    &-wrap {
+        display: flex;
+        max-width: 1360px;
+
+        @include a (tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__list {
+        padding: 40px 14px 84px 0;
+        white-space: nowrap;
+
+        @include a (tablet) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__list-title {
+        font-size: toRem(9);
+        color: #9B9B9B;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__items {
+        margin-bottom: 42px;
+    }
+
+    &__item {
+        font-size: toRem(14);
+        margin-bottom: 22px;
+
+        &-link {
+            color: #000000;
+        }
+    }
+
+    &__images {
+        max-width: 1007px;
+        width: 100%;
+        background: url(./../img/hero-bg.png) no-repeat right top;
+        padding-left: 75px;
+
+        @include a (tablet) {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: toRem(48);
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: -1px;
+        max-width: 465px;
+        margin: 81px 0 64px;
+    }
+
+    &__price {
+        &-wrap {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 66px;
+        }
+
+        &-item {
+            max-width: 181px;
+        }
+
+        font-size: toRem(33);
+        line-height: 33px;
+        color: $dark-color;
+        display: block;
+        margin-bottom: 8px;
+
+        &-descr {
+            line-height: 19px;
+            color: $dark-color;
+        }
+    }
+
+    &__btn {
+        font-size: toRem(14);
+        background-color: transparent;
+        padding: 14px 65px;
+        border: 1px solid $dark-color;
+    }
+}

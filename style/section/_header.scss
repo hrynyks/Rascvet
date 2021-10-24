@@ -7,9 +7,22 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
+
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
     }
 
     &__info {
+
+        @include a (mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
         &-adress {
             position: relative;
             padding-left: 25px;
@@ -47,6 +60,12 @@
 
     &__buttons {
         display: flex;
+        align-items: center;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__phone {
@@ -87,13 +106,37 @@
         height: 30px;
     }
 
+
     &__items {
         display: flex;
         justify-content: space-between;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+
+        }
     }
 
     &__item {
-        padding: 17px 45px;
+        padding: 17px 5px;
+        flex-grow: 1;
+        text-align: center;
+        position: relative;
+
+        @include a (tablet) {
+            padding: 5px 2px;
+        }
+        &-main::before {
+            content: "";
+            position: absolute;
+            background: url(./../img/main.png);
+            width: 10px;
+            height: 10px;
+            left: 23px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
         &-link {
             font-size: toRem(12);
             color: #9B9B9B;

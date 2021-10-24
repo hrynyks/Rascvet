@@ -1,0 +1,108 @@
+.services {
+    padding: 51px 0 67px;
+    background-color: #E5E5E5;
+
+    &-container {
+        max-width: 1215px;
+        margin: 0 auto;
+        display: flex;
+        gap: 47px;
+        padding: 0 15px;
+
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        max-width: 309px;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: toRem(30);
+        line-height: 35px;
+        color: $dark-color;
+        margin: 40px 0 41px;
+    }
+
+    &__descr {
+        line-height: 22px;
+        color: $dark-color;
+        margin-bottom: 11px;
+    }
+
+    &__phone {
+        display: block;
+        font-size: toRem(24);
+        color: $dark-color;
+        padding-left: 22px;
+        margin-bottom: 41px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(./../img/services-phone.png);
+            width: 13px;
+            height: 13px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__link {
+        font-size: toRem(12);
+        color: #487BFF;;
+    }
+
+    &__items {
+        display: flex;
+        gap: 13px;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 450px;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 64px;
+
+        &-title {
+            font-size: toRem(24);
+            color: #328ACA;
+            margin-bottom: 5px;
+        }
+
+        &-descr {
+            font-size: toRem(12);
+            line-height: 20px;
+            color: #ABABAB;
+            text-align: center;
+            margin-bottom: 100px;
+
+            &-2 {
+                max-width: 245px;
+            }
+        }
+
+        &-btn {
+            max-width: 254px;
+            width: 100%;
+            padding: 14px 65px;
+            font-size: toRem(14);
+            color: $dark-color;
+            border: 1px solid #262626;
+            background-color: transparent;
+            white-space: nowrap;
+        }
+    }
+}

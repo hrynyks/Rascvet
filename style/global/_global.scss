@@ -5,6 +5,7 @@
 html {
     font-family: 'Avenir Next Cyr';
     font-size: 16px;
+    font-weight: 400;
     @include a (laptop) {
         font-size: 14px;
     }
@@ -50,6 +51,10 @@ a {
     max-width: 1165px;
     margin: 0 auto;
 
+    @include a (laptop) {
+        max-width: 95%;
+    }
+
 }
 
 
@@ -62,5 +67,13 @@ button {
 
 input {
     outline: none;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
 }
 
